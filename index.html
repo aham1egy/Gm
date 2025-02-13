@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed GM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://c.top4top.io/p_33287z9rt1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow-y: hidden;
+        }
+        .bottom-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    background: linear-gradient(135deg, #0c6b29, #4ca049);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bottom-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.bottom-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+        .header {
+            
+            width: 100%;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px 0;
+            border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .games-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 15px;
+    width: 90%;
+    background: linear-gradient(135deg, #0c6b29, #4ca049);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    /* إخفاء شريط التمرير */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+.games-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.games-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* يجعلها في المنتصف أفقيًا */
+    justify-content: center; /* يجعلها في المنتصف عموديًا */
+    height: 100vh; /* يجعل الارتفاع يغطي الشاشة */
+    gap: 20px; /* تباعد بين الشرائط */
+}
+
+
+        .game-item {
+            flex: 0 0 auto;
+            width: 160px;
+            height: 160px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            scroll-snap-align: start;
+        }
+        .game-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .game-item:hover {
+            transform: scale(1.15);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .game-item:active {
+            transform: scale(1);
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Mohamed GM</div>
+
+    <div class="games-container" id="gamesList1"></div>
+    <div class="games-container" id="gamesList2"></div>
+    <div class="games-container" id="gamesList3"></div>
+    
+    <div class="bottom-bar">
+        <a href="instagram://user?username=aham1eg" class="bottom-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://yourwebsite.com" class="bottom-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Website">
+        </a>
+        <a href="https://wa.me/+201150431215" class="bottom-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+    </div>
+    
+    
+    <script>
+        const games1 =
+         [
+
+{ image: "https://i.top4top.io/p_33315bay04.jpg", link: "https://games.e-droid.net/en/defend-the-tank-appcreator24/index.html" },
+{ image: "https://k.top4top.io/p_3328njfc31.jpg", link: "https://games.e-droid.net/en/fruit-slice-frenzy-appcreator24/index.html" },
+{ image: "https://f.top4top.io/p_3331y76xe1.jpg", link: "https://games.e-droid.net/en/superhero-memory-match-hd-appcreator24/index.html" },
+{ image: "https://g.top4top.io/p_3331dicsm2.jpg", link: "https://games.e-droid.net/en/axe-master-appcreator24/index.html" },
+{ image: "https://h.top4top.io/p_3331bbfnu3.jpg", link: "https://games.e-droid.net/en/biker-lane-appcreator24/index.html" },
+{ image: "https://c.top4top.io/p_33281f65n8.jpg", link: "https://games.e-droid.net/en/sushi-sensei-appcreator24/index.html" },
+{ image: "https://e.top4top.io/p_33282vkqg10.jpg", link: "https://games.e-droid.net/en/koala-sling-appcreator24/index.html" },
+{ image: "https://g.top4top.io/p_3331pjnds1.jpg", link: "https://games.e-droid.net/en/flappylamp-appcreator24/index.html" },
+{ image: "https://a.top4top.io/p_332813jry6.jpg", link: "https://games.e-droid.net/en/pepperoni-gone-wild-appcreator24/index.html" },
+        
+        ];
+
+        const games2 = [
+
+        { image: "https://j.top4top.io/p_3331kdcm55.jpg", link: "https://games.e-droid.net/en/nom-nom-yum-appcreator24/index.html" },
+{ image: "https://k.top4top.io/p_3328ypscd4.jpg", link: "https://games.e-droid.net/en/swing-monkey-appcreator24/index.html" },
+{ image: "https://c.top4top.io/p_3331tj2on3.jpg", link: "https://games.e-droid.net/en/flip-the-knife-appcreator24/index.html" },
+{ image: "https://i.top4top.io/p_3331uzege9.jpg", link: "https://games.e-droid.net/en/chroma-challenge-appcreator24/index.html" },
+{ image: "https://a.top4top.io/p_3331alta91.jpg", link: "https://games.e-droid.net/en/basketball-legend-appcreator24/index.html" },
+{ image: "https://b.top4top.io/p_3331vays32.jpg", link: "https://games.e-droid.net/en/rise-higher-appcreator24/index.html" },
+        ];
+            const games3 = [
+            { image: "https://d.top4top.io/p_3331l7bm64.jpg", link: "https://games.e-droid.net/en/stack-the-pancake-appcreator24/index.html" },
+{ image: "https://e.top4top.io/p_3331h00u45.jpg", link: "https://games.e-droid.net/en/flip-jump-appcreator24/index.html" },
+{ image: "https://f.top4top.io/p_3331jd1w56.jpg", link: "https://games.e-droid.net/en/knife-dart-appcreator24/index.html" },
+{ image: "https://g.top4top.io/p_3331hua7q7.jpg", link: "https://games.e-droid.net/en/ant-smash-appcreator24/index.html" },
+{ image: "https://h.top4top.io/p_3331elae98.jpg", link: "https://games.e-droid.net/en/flick-basketball-appcreator24/index.html" },
+{ image: "https://j.top4top.io/p_333131i4q10.jpg", link: "https://games.e-droid.net/en/dont-mess-up-appcreator24/index.html" },        
+        ];
+
+     
+
+
+            
+        function populateGames(containerId, games) {
+            const gamesList = document.getElementById(containerId);
+            
+            games.forEach(game => {
+                let gameDiv = document.createElement("a");
+                gameDiv.classList.add("game-item");
+                gameDiv.href = game.link;
+                gameDiv.target = "_self"; // فتح الرابط في نفس الصفحة
+                gameDiv.rel = "noopener noreferrer"; // تعزيز الأمان عند فتح روابط خارجية
+
+                let img = document.createElement("img");
+                img.src = game.image;
+                img.alt = "صورة اللعبة";
+                
+                gameDiv.appendChild(img);
+                gamesList.appendChild(gameDiv);
+            });
+        }
+
+        populateGames("gamesList1", games1);
+        populateGames("gamesList2", games2);
+        populateGames("gamesList3", games3);
+      
+       
+    </script>
+</body>
+</html>
